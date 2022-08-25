@@ -1,7 +1,14 @@
-import requests
-import json
+
+from__future__import print_function
+import requests, json
 #declaring the url
-base_url = 'https://api.cisco.com/product/v1/information/serial_numbers/SPE181700LN,REF_CSJ07306405'
-response = requests.get(base_url)
+url = 'https://api.cisco.com/product/v1/information/serial_numbers/SPE181700LN'
+
+headers = { 
+            'Accept': 'application/json'
+            'Content-Type': 'application/json'
+}
+
+response = requests.request("GET", url,headers=headers,data={})
 data = response.json()
 print(data)
