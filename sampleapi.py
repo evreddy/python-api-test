@@ -4,6 +4,6 @@ base_url = 'https://api.cisco.com/product/v1/information/serial_numbers/SPE18170
 
 headers = { 'Accept': 'application/json', 'Content_Type': 'application/json' }
 
-response = requests.request("GET", base_url=base_url, headers=headers, data={})
+response = requests.request("GET", url=base_url, headers=headers, data={})
 data = response.json()
 print(data)
