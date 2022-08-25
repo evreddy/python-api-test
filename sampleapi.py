@@ -1,5 +1,4 @@
 import requests
-import json
 #declaring the url
 base_url = 'https://api.cisco.com/product/v1/information/serial_numbers/SPE181700LN'
 
